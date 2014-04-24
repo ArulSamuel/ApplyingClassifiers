@@ -1,0 +1,23 @@
+{% extends "baseL4g.html" %}
+{% block title %}Result{% endblock %}
+										{% block navigationLinks %} 
+												<li><a href="{% url classify.views.HomePage %}">Home</a></li>
+												<li><a href="{% url classify.views.Estimation %}">Estimation</a></li>
+										{% endblock %}
+{% block content %}
+        
+
+<center>
+<h4 ><font color='black'> The sucess rate for <b><font color='blue'> {{ proj }} </font>  </b> has been estimated </font> </h4> 
+<br>
+{% if status %}
+	<h3><font color='green'> SUCCESS </font></h3>
+{% else %} 
+	<h3><font color='red'> FAILURE </font></h3>
+{% endif %}
+</center>
+<br>
+<!-- Check based on status  -->
+<h4 align="center"> <a href="{% url classify.views.HomePage %}" class="button small">Back to Home</a> </h4>
+
+{% endblock %}

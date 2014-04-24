@@ -1,0 +1,12 @@
+Quality
+Stakeholder.analysis
+Understanding.expectations
+Goal.and.Vision
+Leadership
+Team.Cohesion
+Requirement.Analysis
+Metric.Estimation
+Project.Planning
+Risk.Management
+Software.Architecture
+Project.Management

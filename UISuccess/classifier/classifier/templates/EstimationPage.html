@@ -1,0 +1,51 @@
+{% extends 'baseL4g.html' %}
+{% block title %}Test{% endblock %}
+
+											{% block navigationLinks %} 
+											<li><a href="#">Home</a></li>
+												<li class="current_page_item"><a href="#">Estimation</a></li>
+											{% endblock %}
+
+
+{% block content %}
+<center>
+<table>
+<tr>
+<td>
+<form action="" method="post">
+{% csrf_token %}
+
+<table height="200" width="150" border="0" cellpadding="6" background="#edf0f5">
+	<tr><td colspan="2">{% if form.errors %}<p class="error">Please correct the following fields: </p>{% endif %}</tr>
+
+	<tr><td colspan="2">{% if form.name.errors %}<p class="error">{{ form.name.errors }}</p>{% endif %}</td></tr>
+	<tr><td colspan="2">{{ form.name }}</td></tr>
+
+	<tr><td>{% if form.feat1.errors %}<p class="error">{{ form.feat1.errors }}</p>{% endif %}</td><td>{% if form.feat2.errors %}<p class="error">{{ form.feat2.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat1 }}</td><td>{{ form.feat2 }}</td></tr>
+	
+	<tr><td>{% if form.feat3.errors %}<p class="error">{{ form.feat3.errors }}</p>{% endif %}</td><td>{% if form.feat4.errors %}<p class="error">{{ form.feat4.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat3 }}</td><td>{{ form.feat4 }}</td></tr>
+	
+	<tr><td>{% if form.feat5.errors %}<p class="error">{{ form.feat5.errors }}</p>{% endif %}</td><td>{% if form.feat6.errors %}<p class="error">{{ form.feat6.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat5 }}</td><td>{{ form.feat6 }}</td></tr>
+
+	<tr><td>{% if form.feat7.errors %}<p class="error">{{ form.feat7.errors }}</p>{% endif %}</td><td>{% if form.feat8.errors %}<p class="error">{{ form.feat8.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat7 }}</td><td>{{ form.feat8 }}</td></tr>
+
+	<tr><td>{% if form.feat9.errors %}<p class="error">{{ form.feat9.errors }}</p>{% endif %}</td><td>{% if form.feat10.errors %}<p class="error">{{ form.feat10.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat9 }}</td><td>{{ form.feat10 }}</td></tr>
+
+	<tr><td>{% if form.feat11.errors %}<p class="error">{{ form.feat11.errors }}</p>{% endif %}</td><td>{% if form.feat12.errors %}<p class="error">{{ form.feat12.errors }}</p>{% endif %}</td></tr>
+	<tr><td>{{ form.feat11 }}</td><td>{{ form.feat12 }}</td></tr>
+
+	<tr><td colspan="2" align="center"><p><input type="submit" alt="estimate" value="Estimate" class="button small fa fa-arrow-circle-right"/></p></td></tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</center>
+
+{% endblock %}
+ 
